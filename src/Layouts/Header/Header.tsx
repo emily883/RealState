@@ -1,12 +1,11 @@
-import Navbar from "../../components/Navbar/Navbar";
-import style from "./Header.module.sass";
-import React from "react";
-
+import Navbar from '../../components/Navbar/Navbar';
+// import style from "./Header.module.sass";
+import React from 'react';
 
 export default function Header() {
-    return (
-        <div className={style.HeaderContainer}>
-            <Navbar />
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
