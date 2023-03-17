@@ -14,14 +14,14 @@ export default function Navbar() {
         <SearchRoundedIcon />
         <span>Search</span>
       </div>
-      <div>
-        <button>About</button>
-        <button>Services</button>
-        <button>Reviews</button>
-        <button>Contacts</button>
+      <div className={style.NavButtons}>
+        <button className={style.Button}>About</button>
+        <button className={style.Button}>Services</button>
+        <button className={style.Button}>Reviews</button>
+        <button className={style.Button}>Contacts</button>
       </div>
       <div>
-        <button>Get in Touch</button>
+        <button className={style.Button}>Get in Touch</button>
       </div>
     </div>
   );
