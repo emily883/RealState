@@ -1,0 +1,27 @@
+@use '../../../variables' as v;
+// @use "sass:map";
+
+// $Phone: map.get(v.$breakpoints, "phone");
+// $desktop: map.get(v.$breakpoints, "desktop");
+
+$assetPath: '../../assets/';
+
+.HeaderContainer {
+  height: 100vh;
+}
+
+.BackgroundImage {
+  background-image: url(#{$assetPath}rezised.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.CenterInfo {
+  display: flex;
+  flex-direction: column;
+
+  .Info {
+    display: flex;
+  }
+}

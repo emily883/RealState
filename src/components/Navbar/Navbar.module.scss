@@ -1,0 +1,86 @@
+@use '../../../variables' as v;
+@use '../../../mixing.scss' as m;
+@use 'sass:map';
+
+$Phone: map.get(v.$breakpoints, 'phone');
+$desktop: map.get(v.$breakpoints, 'desktop');
+
+.NavBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include m.break($desktop) {
+    color: v.$ColorWhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3.9vw;
+  }
+}
+
+.Constructor {
+  color: v.$ColorWhite;
+  display: flex;
+  align-items: center;
+  margin: 5vw 0vw 0vw 5vw;
+  font-size: 5vw;
+  font-weight: bold;
+
+  @include m.break($desktop) {
+    display: flex;
+    align-items: center;
+    margin: 0vw 0vw 0vw 1vw;
+
+    span {
+      margin-left: 1vw;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+
+.Menuitem {
+  display: flex;
+
+  @include m.break($desktop) {
+    display: none;
+  }
+}
+
+.ButtonPhone {
+  padding: 0px;
+  min-width: none;
+  color: v.$ColorWhite;
+}
+
+.Button {
+  border: none;
+  background: none;
+  color: v.$ColorWhite;
+  font-weight: 700;
+  padding: 0;
+}
+
+.NavButtons {
+  display: none;
+
+  @include m.break($desktop) {
+    display: flex;
+  }
+
+  button {
+    @include m.break($desktop) {
+      display: flex;
+      margin: 0vw 1vw 0vw 1vw;
+    }
+  }
+}
+
+.Button {
+  display: none;
+
+  @include m.break($desktop) {
+    display: flex;
+  }
+}

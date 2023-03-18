@@ -1,16 +1,16 @@
-import Navbar from '../../components/Navbar/Navbar';
-import style from './Header.module.sass';
+import NavBar from '../../components/Navbar/Navbar';
+import style from './Header.module.scss';
 import React from 'react';
-import NearMeRoundedIcon from '@mui/icons-material/NearMeRounded';
-import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
-import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+// import NearMeRoundedIcon from '@mui/icons-material/NearMeRounded';
+// import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+// import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 
 export default function Header() {
   return (
     <div className={style.HeaderContainer}>
       <div className={style.BackgroundImage}>
-        <Navbar />
-        <div className={style.CenterInfo}>
+        <NavBar />
+        {/* <div className={style.CenterInfo}>
           <div>
             <span>Real Estate</span>
           </div>
@@ -33,7 +33,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
