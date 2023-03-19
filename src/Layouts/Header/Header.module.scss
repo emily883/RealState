@@ -1,8 +1,8 @@
 @use '../../../variables' as v;
-// @use "sass:map";
+@use '../../../mixing.scss' as m;
+@use 'sass:map';
 
-// $Phone: map.get(v.$breakpoints, "phone");
-// $desktop: map.get(v.$breakpoints, "desktop");
+$small: map.get(v.$breakpoints, 'small');
 
 $assetPath: '../../assets/';
 
@@ -20,8 +20,48 @@ $assetPath: '../../assets/';
 .CenterInfo {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  color: v.$ColorWhite;
+  margin: 35vw 0vw;
 
-  .Info {
+  @include m.break($small) {
+    margin: 5vw 0vw;
+  }
+
+  .RealEstateButton {
+    display: none;
+
+    @include m.break($small) {
+      display: flex;
+    }
+  }
+}
+
+.WelcomeTitle {
+  font-size: 10vw;
+  text-align: center;
+
+  @include m.break($small) {
+    font-size: 4.5vw;
+    margin: 5vw;
+  }
+}
+
+.Info {
+  display: flex;
+  margin: 5vw;
+}
+
+.Direction,
+.PhoneNumber,
+.Email {
+  display: none;
+
+  @include m.break($small) {
     display: flex;
+    align-items: center;
+    span {
+      margin: 0vw 5vw 0vw 2vw;
+    }
   }
 }

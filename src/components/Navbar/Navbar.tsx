@@ -4,10 +4,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import style from './Navbar.module.scss';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import Fade from '@mui/material/Fade';
 
-export default function NavBar() {
+export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -20,8 +19,7 @@ export default function NavBar() {
   return (
     <div className={style.NavBarContainer}>
       <div className={style.Constructor}>
-        <div className={style.Menuitem}></div>
-        <span>Constructor.</span>
+        <span>Constructor</span>
       </div>
       <div className={style.NavButtons}>
         <button className={style.Button}>About</button>
@@ -32,7 +30,35 @@ export default function NavBar() {
       <div>
         <button className={style.Button}>Get in Touch</button>
       </div>
-      <div className={style.Menuitem}></div>
+      <div className={style.Menuitem}>
+        <Button
+          className={style.ButtonPhoneContainer}
+          aria-controls={open ? 'basic-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+          id="menu-button"
+        >
+          <MenuRoundedIcon className={style.ButtonPhone} />
+        </Button>
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          TransitionComponent={Fade}
+          transitionDuration={500}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
+        >
+          <MenuItem onClick={handleClose}>About</MenuItem>
+          <MenuItem onClick={handleClose}>Services</MenuItem>
+          <MenuItem onClick={handleClose}>Reviews</MenuItem>
+          <MenuItem onClick={handleClose}>Contacts</MenuItem>
+          <MenuItem onClick={handleClose}>Get in Touch</MenuItem>
+        </Menu>
+      </div>
     </div>
   );
 }

@@ -2,15 +2,14 @@
 @use '../../../mixing.scss' as m;
 @use 'sass:map';
 
-$Phone: map.get(v.$breakpoints, 'phone');
-$desktop: map.get(v.$breakpoints, 'desktop');
+$small: map.get(v.$breakpoints, 'small');
 
 .NavBarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @include m.break($desktop) {
+  @include m.break($small) {
     color: v.$ColorWhite;
     display: flex;
     align-items: center;
@@ -27,7 +26,7 @@ $desktop: map.get(v.$breakpoints, 'desktop');
   font-size: 5vw;
   font-weight: bold;
 
-  @include m.break($desktop) {
+  @include m.break($small) {
     display: flex;
     align-items: center;
     margin: 0vw 0vw 0vw 1vw;
@@ -43,15 +42,20 @@ $desktop: map.get(v.$breakpoints, 'desktop');
 .Menuitem {
   display: flex;
 
-  @include m.break($desktop) {
+  @include m.break($small) {
     display: none;
   }
 }
 
-.ButtonPhone {
+.ButtonPhoneContainer {
   padding: 0px;
   min-width: none;
   color: v.$ColorWhite;
+
+  .ButtonPhone {
+    font-size: 8vw;
+    margin-top: 5vw;
+  }
 }
 
 .Button {
@@ -65,12 +69,12 @@ $desktop: map.get(v.$breakpoints, 'desktop');
 .NavButtons {
   display: none;
 
-  @include m.break($desktop) {
+  @include m.break($small) {
     display: flex;
   }
 
   button {
-    @include m.break($desktop) {
+    @include m.break($small) {
       display: flex;
       margin: 0vw 1vw 0vw 1vw;
     }
@@ -80,7 +84,7 @@ $desktop: map.get(v.$breakpoints, 'desktop');
 .Button {
   display: none;
 
-  @include m.break($desktop) {
+  @include m.break($small) {
     display: flex;
   }
 }
