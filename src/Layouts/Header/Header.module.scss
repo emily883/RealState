@@ -12,9 +12,10 @@ $assetPath: '../../assets/';
 
 .BackgroundImage {
   background-image: url(#{$assetPath}rezised.png);
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 98vh;
 }
 
 .CenterInfo {
@@ -35,6 +36,15 @@ $assetPath: '../../assets/';
       display: flex;
     }
   }
+}
+
+.RealEstateButton {
+  background-color: v.$ColorBottom;
+  padding: 0.5vw;
+  box-shadow: 0px 60px 120px rgba(255, 102, 51, 0.3);
+  border-radius: 15px;
+  font-weight: 900;
+  font-family: v.$FontFamily;
 }
 
 .WelcomeTitle {
@@ -60,6 +70,7 @@ $assetPath: '../../assets/';
   @include m.break($small) {
     display: flex;
     align-items: center;
+
     span {
       margin: 0vw 5vw 0vw 2vw;
     }
