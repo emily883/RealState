@@ -28,14 +28,20 @@ $small: map.get(v.$breakpoints, 'small');
 }
 
 .OurStoryBackground {
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // color: v.$ColorAboutOurStoryBackground;
-  // font-size: 8vw;
-  // font-weight: 900;
-  // opacity: 0.03;
-  display: none;
+  position: absolute;
+  left: 50%;
+  top: 115%;
+  transform: translateY(-115%);
+  transform: translateX(-50%);
+  color: v.$ColorAboutOurStoryBackground;
+  font-size: 8vw;
+  font-weight: 900;
+  opacity: 0.03;
+  // background-color: red;
+  // display: none;
+
+  @include m.break($small) {
+  }
 }
 
 .AboutText {
