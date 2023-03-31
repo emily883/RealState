@@ -1,0 +1,14 @@
+@use '../../../variables' as v;
+
+.HomeContainer {
+  background-color: v.$BackgroundColor;
+  // funciona lptm
+}
+
+.HeaderContainer {
+  margin-bottom: 1vw;
+}
+
+.ContentComponent {
+  margin-top: 5vw;
+}

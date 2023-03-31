@@ -35,6 +35,9 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <div className={style.ShowMoreButton}>
+        <button>Show More</button>
+      </div>
     </div>
   );
 }

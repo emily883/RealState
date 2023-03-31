@@ -46,7 +46,7 @@ $assetPath: '../../assets/';
 
 .RealEstateButton {
   background-color: v.$ColorBottom;
-  padding: 0.5vw;
+  padding: 0.5vw 1vw;
   box-shadow: 0px 60px 120px rgba(255, 102, 51, 0.3);
   border-radius: 15px;
   font-weight: 900;
@@ -80,5 +80,16 @@ $assetPath: '../../assets/';
     span {
       margin: 0vw 5vw 0vw 2vw;
     }
+  }
+}
+
+.ShowMoreButton {
+  background-color: v.$ColorWhite;
+  display: none;
+  // justify-content: center;
+  // position: relative;
+
+  button {
+    padding: 2vw;
   }
 }
